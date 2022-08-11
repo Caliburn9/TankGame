@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main Scenes/Scene1Ali.unity
-    guid: 7b48523aadc6c1141b954cd5f31540c3
+    path: Assets/Main Scenes/MainScene.unity
+    guid: c680c3c9621e89b4caba83f975a4311b
   m_configObjects: {}
