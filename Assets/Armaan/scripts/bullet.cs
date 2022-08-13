@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public Rigidbody rb;
+    Rigidbody rb;
     public int speed = 20;
     public int bulletdamage = 2;
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        
         gameObject.SetActive(false);
     }
 }

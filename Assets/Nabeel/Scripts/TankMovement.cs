@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tank : MonoBehaviour
+public class TankMovement : MonoBehaviour
 {
     public float moveSpeed, rotationSpeed;
     Rigidbody2D rb;
