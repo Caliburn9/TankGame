@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class player : MonoBehaviour
+public class Cannon_vision : MonoBehaviour
 {
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,12 @@ public class player : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "obstacle")
-        {
-            SceneManager.LoadScene(0);
-        }
+
+            Instantiate(bullet, transform.position, transform.rotation);
+        
+
     }
+
 }
