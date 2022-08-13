@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2055175243078249181}
   - component: {fileID: 2055175243078249183}
   - component: {fileID: 2055175243078249176}
+  - component: {fileID: 3391615708617798085}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -131,11 +132,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2055175243078249180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2ceba990cd7dd4bb97978d09c79dd5, type: 3}
+  m_Script: {fileID: 11500000, guid: b9874fda3e5de3b45a02bb97d4375e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.25
-  rotationSpeed: 0.2
+  moveSpeed: 0.5
+  rotationSpeed: 0.05
 --- !u!50 &2055175243078249183
 Rigidbody2D:
   serializedVersion: 4
@@ -149,7 +150,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -183,6 +184,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9475942, y: 1.4874573}
   m_EdgeRadius: 0
+--- !u!114 &3391615708617798085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055175243078249180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc4b6f2a7b3d1945b5efb5e75ca138e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint: {x: 0, y: 0}
 --- !u!1 &2055175243086895121
 GameObject:
   m_ObjectHideFlags: 0

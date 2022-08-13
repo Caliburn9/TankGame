@@ -1747,6 +1747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrossParent (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3620089613016053550, guid: 9b65701ca58a9c5458eafd2e47f07ccd, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b65701ca58a9c5458eafd2e47f07ccd, type: 3}
 --- !u!4 &1728991340 stripped
