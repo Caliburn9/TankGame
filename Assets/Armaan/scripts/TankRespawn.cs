@@ -25,7 +25,7 @@ public class TankRespawn : MonoBehaviour
         {
             checkpoint = true;
         }
-        if (collision.gameObject.tag == "obstacle")
+        if (collision.gameObject.tag == "obstacle"&& checkpoint == true)
         {
             transform.position = new Vector2(spawnpoint.x, spawnpoint.y);
         }
