@@ -9,6 +9,7 @@ TagManager:
   - player
   - Cross
   - obstacle
+  - Exit
   layers:
   - Default
   - TransparentFX
