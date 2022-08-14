@@ -16,28 +16,26 @@ public class TankMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Forward movement and rotation
+        //Forward movement
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.UpArrow))
         {
             rb.AddForce(transform.up * moveSpeed);
-        } else if (Input.GetKey(KeyCode.W))
-        {
-            transform.Rotate(new Vector3(0, 0, -rotationSpeed));
-        } else if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Rotate(new Vector3(0, 0, rotationSpeed));
         }
 
-        //Backward movement and rotation
+        //Backward movement
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow))
         {
             rb.AddForce(-transform.up * moveSpeed);
         }
-        else if (Input.GetKey(KeyCode.S))
+
+        //Left rotation
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Rotate(new Vector3(0, 0, rotationSpeed));
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+
+        //Right rotation
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.DownArrow))
         {
             transform.Rotate(new Vector3(0, 0, -rotationSpeed));
         }
