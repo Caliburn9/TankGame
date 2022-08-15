@@ -19,19 +19,23 @@ public class TankRespawn : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "checkpoint")
         {
             checkpoint = true;
         }
-        if (collision.gameObject.tag == "obstacle"&& checkpoint == true)
+
+        if (collision.gameObject.tag == "obstacle")
         {
-            transform.position = new Vector2(spawnpoint.x, spawnpoint.y);
-        }
+            if (checkpoint == true)
+            {
+                transform.position = new Vector2(spawnpoint.x, spawnpoint.y);
+            }
         else
-        {
-            SceneManager.LoadScene(0);
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 }
