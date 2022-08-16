@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 3391615708617798085}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9874fda3e5de3b45a02bb97d4375e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  rotationSpeed: 0.05
+  moveSpeed: 1.5
+  rotationSpeed: 1
 --- !u!50 &2055175243078249183
 Rigidbody2D:
   serializedVersion: 4

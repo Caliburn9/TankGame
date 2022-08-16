@@ -21,7 +21,7 @@ public class TankRespawn : MonoBehaviour
             {
                 transform.position = new Vector2(spawnpoint.x, spawnpoint.y);
             }
-        else
+            else
             {
                 SceneManager.LoadScene(0);
             }
