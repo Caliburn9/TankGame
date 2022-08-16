@@ -19,25 +19,33 @@ public class TankMovement : MonoBehaviour
         //Forward movement
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.UpArrow))
         {
-            rb.AddForce(transform.up * moveSpeed);
+            Move(moveSpeed);
         }
 
         //Backward movement
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow))
         {
-            rb.AddForce(-transform.up * moveSpeed);
+            Move(-moveSpeed);
         }
 
         //Left rotation
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Rotate(new Vector3(0, 0, rotationSpeed));
+            Rotate(rotationSpeed);
         }
 
         //Right rotation
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Rotate(new Vector3(0, 0, -rotationSpeed));
+             Rotate(-rotationSpeed);
         }
+    }
+    
+    void Move(float speedVal) {
+        rb.AddForce(transform.up * speedVal);
+    }
+    
+    void Rotate(float rotVal) {
+        transform.Rotate(new Vector3(0, 0, rotVal));
     }
 }
