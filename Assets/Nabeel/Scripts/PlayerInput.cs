@@ -50,29 +50,5 @@ public class PlayerInput : MonoBehaviour
         {
             moveScript.Rotate(-rotationSpeed);
         }
-
-        ////Forward movement
-        //if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    moveScript.Move(moveSpeed);
-        //}
-
-        ////Backward movement
-        //if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    moveScript.Move(-moveSpeed);
-        //}
-
-        ////Left rotation
-        //if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    moveScript.Rotate(rotationSpeed);
-        //}
-
-        ////Right rotation
-        //if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    moveScript.Rotate(-rotationSpeed);
-        //}
     }
 }
