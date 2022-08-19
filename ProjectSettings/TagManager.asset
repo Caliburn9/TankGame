@@ -10,6 +10,7 @@ TagManager:
   - Cross
   - obstacle
   - Exit
+  - checkpoint
   layers:
   - Default
   - TransparentFX

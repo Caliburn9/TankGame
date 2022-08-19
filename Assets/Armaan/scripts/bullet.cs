@@ -12,7 +12,6 @@ public class bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +19,6 @@ public class bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
