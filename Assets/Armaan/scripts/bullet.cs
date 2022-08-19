@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
     public int speed = 20;
     public int bulletdamage = 2;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     void Update()
     {
         rb.AddForce(transform.right * speed * Time.deltaTime);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
+
 }

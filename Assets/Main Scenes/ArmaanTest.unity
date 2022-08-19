@@ -234,6 +234,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.26
       objectReference: {fileID: 0}
+    - target: {fileID: 6451069609972470218, guid: e9362bd0f511c0c43a1b53dcb6e4a8a5, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6622443769117745613, guid: e9362bd0f511c0c43a1b53dcb6e4a8a5, type: 3}
       propertyPath: timer
       value: 10
