@@ -4,38 +4,20 @@ using UnityEngine;
 
 public class TankSound : MonoBehaviour
 {
-    public AudioSource TankEngine;
-    public AudioSource TankAcc;
-
-    public AudioSource[] sources;
+    AudioSource[] sources;
+    
     void Start()
     {
         sources = GetComponents<AudioSource>();
     }
 
-    
-    void Update()
+    public void PlaySound(int index)
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
-        {
-            sources[0].enabled = true;
-        }
+        sources[index].Play();
+    }
 
-        else
-        {
-            sources[0].enabled = false;
-        }
-
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.UpArrow)) //|| Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
-        {
-            sources[1].enabled = true;
-            sources[0].enabled = false;
-        }
-
-        else
-        {
-            sources[1].enabled = false;
-
-        }
+    public void StopSound(int index)
+    {
+        sources[index].Stop();
     }
 }
