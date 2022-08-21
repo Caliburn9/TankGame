@@ -7,7 +7,15 @@ public class TankRespawn : MonoBehaviour
 {
     public Vector2 spawnpoint;
     bool checkpoint = false;
-    
+
+    ParticleSystem deathExplosion;
+    public float deathTimer;
+
+    private void Start()
+    {
+        deathExplosion = GetComponent<ParticleSystem>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "checkpoint")
@@ -23,8 +31,15 @@ public class TankRespawn : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(0);
+                StartCoroutine(Death());
             }
         }
+    }
+
+    IEnumerator Death()
+    {
+        deathExplosion.Play();
+        yield return new WaitForSeconds(deathTimer);
+        SceneManager.LoadScene(0);
     }
 }
