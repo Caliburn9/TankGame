@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TankRespawn : MonoBehaviour
 {
+    Transform checkpointLocation;
     public Vector2 spawnpoint;
-    bool checkpoint = false;
+    public bool checkpoint = false;
 
     ParticleSystem deathExplosion;
     public float deathTimer;
@@ -18,16 +19,20 @@ public class TankRespawn : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("checkpoint reached");
         if (collision.gameObject.tag == "checkpoint")
         {
+            checkpointLocation = collision.gameObject.transform;
             checkpoint = true;
+            Debug.Log("checkpoint reached");
         }
 
         if (collision.gameObject.tag == "obstacle")
         {
             if (checkpoint == true)
             {
-                transform.position = new Vector2(spawnpoint.x, spawnpoint.y);
+
+                transform.position = checkpointLocation.position;
             }
             else
             {
