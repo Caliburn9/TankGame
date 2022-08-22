@@ -7,6 +7,7 @@ public class TankRespawn : MonoBehaviour
 {
     public Vector2 spawnpoint;
     bool checkpoint = false;
+    TankSound soundScript;
 
     ParticleSystem deathExplosion;
     public float deathTimer;
@@ -14,6 +15,7 @@ public class TankRespawn : MonoBehaviour
     private void Start()
     {
         deathExplosion = GetComponent<ParticleSystem>();
+        soundScript = GetComponent<TankSound>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -39,6 +41,7 @@ public class TankRespawn : MonoBehaviour
     IEnumerator Death()
     {
         deathExplosion.Play();
+        soundScript.PlaySound(2);
         yield return new WaitForSeconds(deathTimer);
         SceneManager.LoadScene(0);
     }
