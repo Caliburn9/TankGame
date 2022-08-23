@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TankRespawn : MonoBehaviour
 {
     Transform checkpointLocation;
-    public Vector2 spawnpoint;
+    
     public bool checkpoint = false;
 
     ParticleSystem deathExplosion;

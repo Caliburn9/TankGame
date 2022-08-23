@@ -6,7 +6,7 @@ public class bullet : MonoBehaviour
 {
     Rigidbody2D rb;
     public int speed = 20;
-    public int bulletdamage = 2;
+  
     // Start is called before the first frame update
     void Start()
     {
