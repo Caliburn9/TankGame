@@ -6,11 +6,13 @@ public class Checkpointbehaviour : MonoBehaviour
 {
 
     public AudioSource checkpointaudio;
+    public GameObject visual;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        gameObject.SetActive(false);
         checkpointaudio.Play();
+    
+        visual.gameObject.SetActive(false);
     }
+
 }

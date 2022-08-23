@@ -5,12 +5,6 @@ using UnityEngine;
 public class TankParticles : MonoBehaviour
 {
     public ParticleSystem ps;
-    //private ParticleSystem.EmissionModule em;
-
-    //void Start()
-    //{
-    //    em = ps.emission;
-    //}
 
     public void StartEmit()
     {
