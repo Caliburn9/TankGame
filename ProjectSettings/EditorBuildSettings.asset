@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main Scenes/MainScene.unity
-    guid: c680c3c9621e89b4caba83f975a4311b
+    path: Assets/Main Scenes/Level1.unity
+    guid: f83359a6d09991d48bcdc8ac628fcb0d
   - enabled: 1
+    path: Assets/Main Scenes/Level2.unity
+    guid: 76a94d1e5a5d74f458b58fe630a5fd01
+  - enabled: 1
+    path: Assets/Main Scenes/Level3.unity
+    guid: 3a08942c2c466274bb32a54b8e94bced
+  - enabled: 1
+    path: Assets/Main Scenes/Level4.unity
+    guid: c680c3c9621e89b4caba83f975a4311b
+  - enabled: 0
     path: Assets/Ali/WinScene.unity
     guid: e7381bfc1c5c6e640a14b4fa3433f5a9
+  - enabled: 1
+    path: Assets/Main Scenes/WinScene.unity
+    guid: 49b83561c9994e3438930ba4a922d9bd
   m_configObjects: {}
