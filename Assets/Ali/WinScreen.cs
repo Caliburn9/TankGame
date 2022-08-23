@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
-   
+    public string LevelName;
 
  
     
@@ -13,7 +13,7 @@ public class WinScreen : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(LevelName);
         }
     }
 
