@@ -19,12 +19,12 @@ public class TankRespawn : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("checkpoint reached");
+       
         if (collision.gameObject.tag == "checkpoint")
         {
             checkpointLocation = collision.gameObject.transform;
             checkpoint = true;
-            Debug.Log("checkpoint reached");
+            
         }
 
         if (collision.gameObject.tag == "obstacle")
