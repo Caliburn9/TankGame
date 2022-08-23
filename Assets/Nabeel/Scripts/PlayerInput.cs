@@ -6,7 +6,9 @@ public class PlayerInput : MonoBehaviour
 {
     public float moveSpeed, rotationSpeed;
     public GameObject[] lights;
+
     float leftMove, rightMove;
+
     TankMovement moveScript;
     TankSound soundScript;
     TankParticles particleScript;

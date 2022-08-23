@@ -10,11 +10,13 @@ public class TankRespawn : MonoBehaviour
     public bool checkpoint = false;
 
     ParticleSystem deathExplosion;
+    TankSound soundScript;
     public float deathTimer;
 
     private void Start()
     {
         deathExplosion = GetComponent<ParticleSystem>();
+        soundScript = GetComponent<TankSound>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,22 +31,22 @@ public class TankRespawn : MonoBehaviour
 
         if (collision.gameObject.tag == "obstacle")
         {
-            if (checkpoint == true)
-            {
-
-                transform.position = checkpointLocation.position;
-            }
-            else
-            {
-                StartCoroutine(Death());
-            }
+            StartCoroutine(Death());
         }
     }
 
     IEnumerator Death()
     {
         deathExplosion.Play();
+        soundScript.PlaySound(2);
         yield return new WaitForSeconds(deathTimer);
-        SceneManager.LoadScene(0);
+        if (checkpoint == true)
+        {
+            transform.position = checkpointLocation.position;
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
