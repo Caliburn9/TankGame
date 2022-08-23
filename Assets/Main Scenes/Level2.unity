@@ -889,6 +889,10 @@ PrefabInstance:
       propertyPath: LevelName
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 1741345412171866892, guid: baaf4c00f1990b047952014e48502549, type: 3}
+      propertyPath: levelName
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 4778926838922304263, guid: baaf4c00f1990b047952014e48502549, type: 3}
       propertyPath: m_RootOrder
       value: 2

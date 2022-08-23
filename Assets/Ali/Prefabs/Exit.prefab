@@ -95,9 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5752960715974996625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1849d1a2bc796d46bb13ad1b5256662, type: 3}
+  m_Script: {fileID: 11500000, guid: e64dc2c8c82f24a4ca655d29225ee508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelName: 
 --- !u!61 &6648688519220839878
 BoxCollider2D:
   m_ObjectHideFlags: 0
